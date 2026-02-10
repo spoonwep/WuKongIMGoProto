@@ -89,7 +89,7 @@ func (l *WKProto) DecodePacketWithConn(conn io.Reader, version uint8) (Frame, er
 	}
 
 	if framer.RemainingLength > MaxRemaingLength {
-		return nil, errors.New(fmt.Sprintf("消息超出最大限制[%d]！", MaxRemaingLength))
+		return nil, errors.New(fmt.Sprintf("消息超出最大限制[%d]！实际大小：%d", MaxRemaingLength, framer.RemainingLength))
 		// panic(errors.New(fmt.Sprintf("消息超出最大限制[%d]！", MaxRemaingLength)))
 	}
 
@@ -132,7 +132,7 @@ func (l *WKProto) DecodeFrame(data []byte, version uint8) (Frame, int, error) {
 	}
 
 	if framer.RemainingLength > MaxRemaingLength {
-		return nil, 0, fmt.Errorf("消息超出最大限制[%d]！", MaxRemaingLength)
+		return nil, 0, fmt.Errorf("消息超出最大限制[%d]！实际大小：%d", MaxRemaingLength, framer.RemainingLength)
 	}
 	msgLen := int(framer.RemainingLength) + 1 + remainingLengthLength
 	if len(data) < msgLen {
