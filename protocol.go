@@ -35,7 +35,7 @@ type WKProto struct {
 const LatestVersion = 5
 
 // MaxRemaingLength 最大剩余长度 // 1<<28 - 1
-const MaxRemaingLength uint32 = 1024 * 1024
+const MaxRemaingLength uint32 = 4 * 1024 * 1024
 
 // PayloadMaxSize 最大负载大小
 const PayloadMaxSize = math.MaxInt16
