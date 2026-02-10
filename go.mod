@@ -1,4 +1,4 @@
-module github.com/WuKongIM/WuKongIMGoProto
+module github.com/spoonwep/WuKongIMGoProto
 
 go 1.18
 

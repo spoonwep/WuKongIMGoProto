@@ -7,12 +7,12 @@ WuKongIM Protocol（WKProto）是一套基于TCP的二进制协议，用于客�
 ## 2. 使用
 
 ```
-go get github.com/WuKongIM/WuKongIMGoProto
+go get github.com/spoonwep/WuKongIMGoProto
 ```
 
 ```
 import  (
-    wkproto "github.com/WuKongIM/WuKongIMGoProto"
+    wkproto "github.com/spoonwep/WuKongIMGoProto"
     ...
 )
 ```
